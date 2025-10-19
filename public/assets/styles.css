@@ -1,0 +1,119 @@
+:root { 
+    font-family: system-ui, sans-serif; 
+}
+.container {  
+    max-width: 1100px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+}
+.topnav {
+     display:flex; 
+     gap:1rem; 
+     padding:0.75rem 1rem;
+      background:#222; 
+    }
+.topnav a { 
+    color:#fff; 
+    text-decoration:none;
+ }
+.toolbar { 
+    display:flex;
+     flex-wrap:wrap; 
+     gap:.5rem; 
+     align-items:center;
+      margin:.5rem 0 1rem;
+     }
+.btn, .link { 
+    padding:.5rem .75rem;
+    background:#eee;
+    border-radius:6px; 
+    text-decoration:none; 
+    border: none; 
+}
+.link { 
+    background: transparent;
+    text-decoration: underline; 
+    cursor:pointer;
+ }
+.table { 
+    width:100%; 
+    border-collapse: 
+    collapse;
+ }
+.table th,.table td {
+     border-bottom:1px solid #ddd;
+     padding:.5rem; text-align:left; 
+ }
+.actions a, .actions form { 
+    margin-right:.5rem; 
+    display:inline-block; 
+}
+.danger { 
+    color:crimson;
+ }
+.flash { 
+    padding:.5rem .75rem; 
+    border-radius:6px; 
+    margin-bottom:.5rem; 
+}
+.flash.ok {
+    background:#e7f7ea;
+ }
+.flash.error { 
+    background:#fde8e8; 
+    color:#b00020; 
+}
+.form { 
+    display:grid;
+    gap:.75rem; 
+    max-width:720px; 
+}
+.form .row { 
+    display:flex; 
+    gap:1rem; 
+}
+label { 
+    display:grid; 
+    gap:.25rem; 
+}
+input,select,textarea,button { 
+    padding:.5rem; 
+    border:1px solid #ccc;
+    border-radius:6px;
+ }
+button { 
+    cursor:pointer;
+ }
+small.error { 
+    color:#b00020;
+ }
+.autocomplete { 
+    position: relative;
+ }
+.autocomplete .list { 
+    position:absolute;
+    z-index:20; 
+    background:#fff;
+    border:1px solid #ccc; 
+    border-radius:6px; 
+    width:100%; 
+    max-height:220px; 
+    overflow:auto; 
+}
+.autocomplete .item { 
+    padding:.5rem; 
+    cursor:pointer; 
+    border-bottom:1px solid #f0f0f0;
+ }
+.autocomplete .item:hover { 
+    background:#f5f5f5; 
+}
+.pagination { 
+    display:flex; gap:.25rem; margin-top:1rem; 
+}
+.pagination a { 
+    padding:.35rem .6rem; border:1px solid #ddd; border-radius:6px; text-decoration:none; 
+}
+.pagination a.active { 
+    background:#222; color:#fff; border-color:#222; 
+}
