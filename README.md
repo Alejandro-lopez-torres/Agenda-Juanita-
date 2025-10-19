@@ -1,34 +1,34 @@
-# Agenda Juanita (PHP 8 + MySQL + MVC)
+# Agenda Juanita (PHP8/MySQL/MVC)
 
-## Requisitos
-- PHP 8.x
-- MySQL 8 (o compatible) y Workbench
-- Apache (con mod_rewrite habilitado) o similar
+## Reqs
+- PHP8+
+- MySQL8+ & Workbench
+- Apache c/ mod_rewrite
 
 ## Instalación
-1. Crear la base de datos y tablas (DDL en `sql/schema.sql`).
-2. Configurar credenciales en `config/config.php`.
-3. Copiar el proyecto a tu servidor local, por ejemplo `htdocs/agenda-juanita`.
-4. Asegúrate de que `.htaccess` esté activo (URL rewriting).
-5. Navega a `http://localhost/agenda-juanita/public`.
+1. Ejecuta `sql/schema.sql`.
+2. Edita `config/config.php`.
+3. Copia al servidor.
+4. Activa `.htaccess`.
+5. Accede `localhost/agenda-juanita/public`.
 
-## Características incluidas
-- CRUD de **Clientes** y **Citas**.
-- **CSRF** en formularios y eliminaciones.
-- **Validaciones** de servidor (correo, DNI, etc.).
-- **Paginación** visual.
-- **Filtros avanzados** en Agenda (estado, hoy/semana/mes o fechas libre).
-- **Autocompletado** de clientes al crear/editar cita.
-- Prevención simple de **choque de citas** (misma fecha + hora + cliente).
+## Funciones
+- CRUD: Clientes/Citas.
+- CSRF.
+- Validaciones: email/DNI.
+- Paginación/Filtros.
+- Autocompletado.
+- Sin choques.
 
 ## Estructura
-- `/app/Core` → Database (PDO), Router, Helpers (CSRF, validates, etc.)
-- `/app/Models` → Cliente, Cita
-- `/app/Controllers` → ClienteController, CitaController
-- `/views` → Layouts + vistas CRUD
-- `/public` → index.php, assets, .htaccess
-- `/config/config.php` → configuración
+- `/app/Core`: BD/Router/Helpers.
+- `/app/Models`: Cliente/Cita.
+- `/app/Controllers`: Cliente/Cita.
+- `/views`: Plantillas.
+- `/public`: Entrada/assets.
+- `/config`: Config.
 
 ## Notas
-- Para producción, añade manejo de errores/logging y endurece validaciones.
-- Puedes cambiar el rango de validación de DNI en `Helpers::validateCliente`.
+- Prod: Logs/validaciones estrictas.
+- Ajusta DNI en Helpers.
+
